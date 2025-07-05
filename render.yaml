@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: gpt4free-api
+    env: docker
+    plan: free
+    region: oregon
+    repo: https://github.com/prozonegod/gpt4free
+    branch: main
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: PORT
+        value: 1337
